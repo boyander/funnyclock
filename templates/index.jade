@@ -1,0 +1,32 @@
+!!! 5
+html(lang='es')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    script var app_port=#{port};
+    != css('main')
+  body
+    div.header
+      h1 Funny Clock
+    div.clock
+      span.digit
+      span.digit
+      span.colon
+      span.digit
+      span.digit
+      span.colon
+      span.digit
+      span.digit
+    div.speaker
+      a(href="#",id="playtime")
+        img(src="speaker.png")
+    div.footer
+      p &copy; 2012 Alguer Balanya, Victor Hidalgo, Marc Pomar
+      p Universitat Politécnica de Catalunya
+    != js('jquery-1.8.2.min')
+    != js('jquery.playSound')
+    != js('clock')
+
+
+
+
