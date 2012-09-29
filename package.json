@@ -13,6 +13,6 @@
     "coffee-script": "*",
     "connect-assets": "*",
     "uglify-js": "*",
-    "sys": "*",
+    "sys": "*"
   }
 }
