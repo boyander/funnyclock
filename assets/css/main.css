@@ -34,7 +34,8 @@ p{
 .colon{
   background: -webkit-linear-gradient(-90deg, #333 10px, transparent 10px),
               -webkit-linear-gradient(-90deg, #333 10px, transparent 10px);
-  
+  background: -moz-linear-gradient(-90deg, #333 10px, transparent 10px),
+              -moz-linear-gradient(-90deg, #333 10px, transparent 10px);
  
   background-position: 0 40px, 0 65px;
   background-repeat:no-repeat;
@@ -50,7 +51,14 @@ p{
                     -webkit-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   
           
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #333 50px),   
-                    -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #333 50px);  
+                    -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #333 50px);
+                    
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),  
+                    -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   
+                    -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   
+          
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #333 50px),   
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #333 50px);   
   
   background-position: 0 0, 0 50px, 0 100px, 0 10px, 0 60px;
   background-repeat:no-repeat;
@@ -64,6 +72,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+  
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
 
 .one{
@@ -73,6 +88,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
 
 .two{
@@ -82,6 +104,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #333 50px);   /* Bottomleft */
+
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #333 50px);   /* Bottomleft */
 }
 
 .three{
@@ -91,6 +120,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
 
 .foure{
@@ -100,6 +136,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
 
 .five{
@@ -109,6 +152,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #333 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+  
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #333 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
 
 
@@ -119,6 +169,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #333 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+  
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #333 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
 
 
@@ -129,6 +186,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+  
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #333 10px, #333 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
 
 
@@ -139,6 +203,13 @@ p{
           
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+  
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
 
 .nine{
@@ -148,4 +219,11 @@ p{
           
                     -webkit-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
                     -webkit-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
+  
+  background-image: -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /*  Top  */
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Middle*/
+                    -moz-linear-gradient(0deg, transparent 10px, #82FA58 10px, #82FA58 50px, transparent 50px),   /* Bottom*/
+          
+                    -moz-linear-gradient(0deg, #82FA58 10px, transparent 10px, transparent 50px, #82FA58 50px),   /* Topleft */
+                    -moz-linear-gradient(0deg, #333 10px, transparent 10px, transparent 50px, #82FA58 50px);   /* Bottomleft */
 }
