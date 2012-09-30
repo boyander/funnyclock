@@ -68,13 +68,16 @@ var clock = {
 // Start Clock object
 clock.init();
 
+// Click on speaker
 $('#playtime').click(function(){
   console.log('Requesting audio object to server');
-  var urlstr = "/gettime";
+  playTime();
+});
 
+function playTime(){
   // Ajax request for current time
   $.ajax({
-      url: urlstr,
+      url: '/gettime',
       dataType: 'json',
       success: function(data) {
         $.playSound(data.wav);
@@ -83,7 +86,9 @@ $('#playtime').click(function(){
         console.log("Cannot conect with audio server");
       },
   });
-});
+}
+
+playTime();
 
 
 

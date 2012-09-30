@@ -10,6 +10,7 @@
  */
 var express = require('express')
   , http = require('http')
+  , fs = require('fs')
   , sys = require('sys');
 
 var app = express();
@@ -65,9 +66,53 @@ function clock(request, result){
 /*
  * JSON response
  */
+
+var exec = require('child_process').exec;
+
 function timeJSON(request, result){
-	// Define object for audio playing
-	var object = {'wav':updateWaveform()};
+  // Current & last timestamps
+  var currentTime = Math.round((new Date()).getTime() / 1000);
+  var latestTime = request.app.get('latestTime') || 0;
+
+  // Setup last file
+  var currentWAV = "current" + latestTime + ".wav";
+
+  // Regenerate at least every minute
+  if (currentTime - latestTime > 60){
+    // Update current timestamp
+    request.app.set('latestTime', currentTime);
+
+    // Setup output file path & voice paths
+    currentWAV = "current" + currentTime + ".wav";
+    var voicePath = "/Users/boyander/Desktop/tecno_parla/time_ldom";
+    var savePath = __dirname + "/public/" + currentWAV;
+
+    // Execute festival command to generate Waveform
+    var command = "pushd " + voicePath + "; festival -b saycurrent.scm \"(savetime '" + savePath + ")\"; popd;";
+    console.log("Regenerating Wav audio:\"" + command + "\"");
+
+    exec(command, function puts(error, stdout, stderr){
+      // View standard outputs on node log
+      sys.puts(stderr);
+      sys.puts(stdout);
+      console.log(error);
+
+      // Remove previous generated
+      if(latestTime != 0){
+        var previousWAV = "public/current" + latestTime + ".wav";
+        fs.unlink(previousWAV, function (err) {
+          if (err) console.log(err);
+          console.log('Deleted ' + previousWAV);
+        });
+      }
+    });
+
+  }else{
+    console.log('Using pre syntetized time, regenerate on ' + Math.abs(currentTime - latestTime - 60) + ' seconds');
+  }
+
+  // Define object for audio playing
+  var object = {'wav':currentWAV};
 
 	// Send object to client
 	result.contentType('application/json');
@@ -75,23 +120,7 @@ function timeJSON(request, result){
 }
 
 
-var exec = require('child_process').exec;
 
-function updateWaveform(){
-  var timestamp = Math.round((new Date()).getTime() / 1000);
-  var voicePath = "/Users/boyander/Desktop/tecno_parla/time_ldom";
-  var currentWAV = "current" + timestamp + ".wav";
-  var savePath = __dirname + "/public/" + currentWAV;
-  var command = "pushd " + voicePath + "; festival -b saycurrent.scm \"(savetime '" + savePath + ")\"; popd;";
-  console.log("Regenerate Wav audio:\"" + command + "\"");
-  exec(command, puts);
-  return currentWAV;
-}
-
-function puts(error, stdout, stderr){
-  sys.puts(stderr);
-  sys.puts(stdout);
-}
 
 
 
