@@ -16,6 +16,12 @@ var express = require('express')
 var app = express();
 
 /*
+ * Configuration (voice path)
+ */
+var voicePath = "/home/mpomar/time_ldom";
+
+
+/*
  * Express configuration
  */
 app.configure(function(){
@@ -84,14 +90,13 @@ function timeJSON(request, result){
 
     // Setup output file path & voice paths
     currentWAV = "current" + currentTime + ".wav";
-    var voicePath = "/Users/boyander/Desktop/tecno_parla/time_ldom";
     var savePath = __dirname + "/public/" + currentWAV;
 
     // Execute festival command to generate Waveform
-    var command = "pushd " + voicePath + "; festival -b saycurrent.scm \"(savetime '" + savePath + ")\"; popd;";
+    var command = "festival -b saycurrent.scm \"(savetime '" + savePath + ")\"";
     console.log("Regenerating Wav audio:\"" + command + "\"");
 
-    exec(command, function puts(error, stdout, stderr){
+    exec(command, {'cwd':voicePath}, function puts(error, stdout, stderr){
       // View standard outputs on node log
       sys.puts(stderr);
       sys.puts(stdout);
