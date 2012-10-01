@@ -128,18 +128,17 @@ function timeJSON(request, result){
           console.log('Deleted ' + previousWAV);
         });
       }
+      // Send object to client
+      result.contentType('application/json');
+      result.send({'wav':currentWAV});
     });
 
   }else{
     console.log('Using pre syntetized time, regenerate on ' + Math.abs(currentTime - latestTime - 60) + ' seconds');
+    // Send object to client
+    result.contentType('application/json');
+    result.send({'wav':currentWAV});
   }
-
-  // Define object for audio playing
-  var object = {'wav':currentWAV};
-
-	// Send object to client
-	result.contentType('application/json');
-	result.send(object);
 }
 
 
