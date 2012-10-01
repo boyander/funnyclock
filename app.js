@@ -13,17 +13,35 @@ var express = require('express')
   , fs = require('fs')
   , sys = require('sys');
 
-var app = express();
 
 /*
  * Configuration (voice path)
  */
-var voicePath = "/home/mpomar/time_ldom";
 
+// PRODUCTION
+//var voicePath = "/home/mpomar/time_ldom";
+
+// DEVELOPMENT
+var voicePath = "/Users/boyander/Desktop/tecno_parla/time_ldom";
+
+// Works starting on version 0.9 of node
+/*
+console.log("Check audio path...");
+try{
+  stats = fs.lstatSync("/Users/boyander/9bZkp7q19f0.aac");
+  if (!stats.isDirectory()) {
+    throw ENOENT;
+  }
+} catch(err) {
+  console.log("Voice dir not found, bye...");
+  process.exit(1);
+}
+*/
 
 /*
  * Express configuration
  */
+var app = express(); 
 app.configure(function(){
   app.set('localrun', process.env.LOCAL || false);
   app.set('port', process.env.PORT || 8080);
@@ -93,7 +111,7 @@ function timeJSON(request, result){
     var savePath = __dirname + "/public/" + currentWAV;
 
     // Execute festival command to generate Waveform
-    var command = "festival -b saycurrent.scm \"(savetime '" + savePath + ")\"";
+    var command = "festival -b webservice_load.scm \"(savetime '" + savePath + ")\"";
     console.log("Regenerating Wav audio:\"" + command + "\"");
 
     exec(command, {'cwd':voicePath}, function puts(error, stdout, stderr){
