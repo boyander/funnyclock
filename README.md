@@ -1,6 +1,7 @@
 # FunnyClock
 
-Demo -> [FunnyClock](http://faable.com:8080/)
+**Demo:** [FunnyClock](http://faable.com:8080/)
+![FunnyClock](public/demo.png)
 
 Main Characteristics
 --------------------
