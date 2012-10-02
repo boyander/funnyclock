@@ -1,5 +1,7 @@
 # FunnyClock
 
+Demo -> [FunnyClock](http://faable.com:8080/)
+
 Main Characteristics
 --------------------
 Syntethized speech time based on festival TTS with node.js frontend
