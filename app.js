@@ -1,5 +1,5 @@
 /**
- * Project Name: funny-clock
+ * Project Name: FunnyClock
  * Author: Marc Pomar, Victor Hidalgo, Alguer Balanya
  * Contact: marc@faable.com or boyander@gmail.com
  * Description: Syntethized speech time based on festival TTS with node.js frontend
